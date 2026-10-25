@@ -1,0 +1,13 @@
+# Claude API
+anthropic
+python-dotenv>=1.0
+
+# Speech-to-text (microphone capture + Google Web Speech recognition)
+SpeechRecognition>=3.10
+PyAudio>=0.2.14
+
+# Text-to-speech (uses Windows SAPI5 voices, works offline)
+pyttsx3>=2.90
+
+# Tests
+pytest>=8.0
