@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jarvis-assistant"
+version = "0.1.0"
+description = "JARVIS, a personal AI voice assistant powered by Claude"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic",
+    "python-dotenv>=1.0",
+    "SpeechRecognition>=3.10",
+    "PyAudio>=0.2.14",
+    "pyttsx3>=2.90",
+]
+
+[project.scripts]
+jarvis = "jarvis.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
